@@ -1,0 +1,28 @@
+package com.example.awsconnectiontest.hello.controller;
+
+import com.example.awsconnectiontest.hello.entity.Hello;
+import com.example.awsconnectiontest.hello.repository.HelloRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequiredArgsConstructor
+public class HelloController {
+
+  private final HelloRepository helloRepository;
+
+  @GetMapping("/test")
+  public String helloTest() {
+    return "Hello AWS";
+  }
+
+  @GetMapping("/test/db")
+  public String helloDbTest() {
+    helloRepository.save(Hello.builder()
+        .name("name1")
+        .ban("1")
+        .build());
+    return "success";
+  }
+}
