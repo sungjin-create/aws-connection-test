@@ -26,12 +26,8 @@ public class HelloController {
         .build());
     return "success";
   }
-
-
-  private String yml;
-
   @GetMapping("/yml")
   public String ymlTest() {
-    return yml;
+    return "update test";
   }
 }
