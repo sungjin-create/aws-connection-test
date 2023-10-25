@@ -27,8 +27,11 @@ public class HelloController {
     return "success";
   }
 
+  @Value("jwt.oauth")
+  private String pwd;
   @GetMapping("/yml")
   public String ymlTest() {
-    return "update test";
+    pwd = "test success";
+    return pwd;
   }
 }
