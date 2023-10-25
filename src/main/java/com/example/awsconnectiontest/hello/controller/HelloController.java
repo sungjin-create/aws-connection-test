@@ -14,7 +14,7 @@ public class HelloController {
 
   @GetMapping("/test")
   public String helloTest() {
-    return "Hello AWS Update";
+    return "Hello AWS Update update";
   }
 
   @GetMapping("/test/db")
