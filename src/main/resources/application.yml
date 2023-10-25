@@ -1,6 +1,7 @@
 spring:
   profiles:
-    include: oauth
+    include:
+      - oauth.yml
   config:
     import:
       - oauth.yml
