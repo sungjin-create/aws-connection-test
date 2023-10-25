@@ -27,11 +27,8 @@ public class HelloController {
     return "success";
   }
 
-  @Value("${jwt.oauth}")
-  private String yml;
-
   @GetMapping("/yml")
   public String ymlTest() {
-    return yml;
+    return "update test";
   }
 }
