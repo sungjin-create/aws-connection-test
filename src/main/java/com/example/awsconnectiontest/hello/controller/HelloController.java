@@ -32,6 +32,7 @@ public class HelloController {
   @GetMapping("/yml")
   public String ymlTest() {
     pwd = "test success";
+
     return pwd;
   }
 }
