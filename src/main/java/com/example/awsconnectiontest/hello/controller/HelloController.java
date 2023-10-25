@@ -31,8 +31,6 @@ public class HelloController {
   private String pwd;
   @GetMapping("/yml")
   public String ymlTest() {
-    pwd = "test success";
-
     return pwd;
   }
 }
