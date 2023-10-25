@@ -29,6 +29,6 @@ public class HelloController {
 
   @GetMapping("/yml")
   public String ymlTest() {
-    return yml;
+    return "update test";
   }
 }
